@@ -1,0 +1,15 @@
+{
+    "email": "Email",
+    "politica email": "We won't share your email",
+    "password": "Password",
+    "password condition" : "Password must be at least 9 characters",
+    "enter email": "Enter email",
+    "detalles": "Details",
+    "marca": "Brand",
+    "modelo": "Model",
+    "precio": "Price",
+    "anio" : "Year",
+    "idioma": "Change language",
+    "next": "Next",
+    "enter password": "enter password"
+}

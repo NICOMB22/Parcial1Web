@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Detalle from "./Detalle";
+import { FormattedDate, FormattedMessage } from "react-intl";
 
 function Inventario() {
   const navigate = useNavigate();
@@ -31,16 +32,16 @@ function Inventario() {
           <Card.Body>
             <Card.Title>{part.partName}</Card.Title>
             <Card.Text>
-              <strong>Marca:</strong> {part.carMaker}
+              <strong><FormattedMessage id = "marca"></FormattedMessage></strong> {part.carMaker}
               <br />
-              <strong>Modelo:</strong> {part.carModel}
+              <strong><FormattedMessage id = "modelo"></FormattedMessage></strong> {part.carModel}
               <br />
-              <strong>Precio:</strong> {part.price}
+              <strong><FormattedMessage id = "precio"></FormattedMessage></strong> {part.price}
               <br />
-              <strong>Año:</strong> {part.carYear}
+              <strong><FormattedMessage id = "anio"></FormattedMessage></strong> {part.carYear}
             </Card.Text>
             <Button variant="primary" onClick={() => viewDetails(index)}>
-              Ver detalles
+              <FormattedMessage id = "detalles"></FormattedMessage>
             </Button>
           </Card.Body>
         </Card>

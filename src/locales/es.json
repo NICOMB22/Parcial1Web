@@ -1,0 +1,16 @@
+{
+    "email": "Correo",
+    "politica email": "No compartiremos tu correo",
+    "password": "Contraseña",
+    "password condition" : "La contraseña debe tener por lo menos 9 caracteres",
+    "enter email": "Ingrese su correo",
+    "detalles" : "Ver detalles",
+    "marca": "Marca",
+    "modelo": "Modelo",
+    "precio": "Precio",
+    "anio": "Año",
+    "idioma": "Cambiar idioma",
+    "next": "Siguiente",
+    "enter password": "Ingresar contraseña"
+
+}

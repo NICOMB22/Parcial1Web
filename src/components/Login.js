@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl"
+import { useIntl } from 'react-intl';
 
 function Login() {
+  const intl = useIntl();
   const [formValues, setFormValues] = React.useState({
     email: "",
     password: "",
@@ -79,15 +82,21 @@ function Login() {
                 </>
               ) : (
                 <Form.Group>
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label>
+                    <FormattedMessage 
+                    id = "email">
+                    </FormattedMessage>
+                      </Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Enter email"
+                    
+                    placeholder={intl.formatMessage({ id: "enter email" })}
                     onChange={updateEmail}
                     value={formValues.email}
                   ></Form.Control>
                   <Form.Text className="text-muted">
-                    We won't share your email
+                    <FormattedMessage id = "politica email">
+                    </FormattedMessage>
                   </Form.Text>
                 </Form.Group>
               )}
@@ -95,16 +104,21 @@ function Login() {
               {showPassword && (
                 <>
                   <Form.Group>
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>
+                      <FormattedMessage id = "password">
+                      </FormattedMessage>
+                      </Form.Label>
                     <Form.Control
                       type="password"
-                      placeholder="Enter password"
+                      placeholder={intl.formatMessage({ id: "enter password" })}
                       onChange={updatePassword}
                       value={formValues.password}
                       style={{ borderColor: formValid.password ? "" : "red" }}
                     ></Form.Control>
                     <Form.Text className="tex-muted">
-                      Password must be at least 9 characters
+                      <FormattedMessage id = "password condition">
+
+                      </FormattedMessage>
                     </Form.Text>
                   </Form.Group>
                 </>
@@ -112,7 +126,7 @@ function Login() {
             </Form>
             <br />
             <Button onClick={loginBtnAction}>
-              {showPassword ? "Login" : "Next"}
+              {showPassword ? "Login" : <FormattedMessage id = "next"></FormattedMessage>}
             </Button>
           </Col>
         </Row>
